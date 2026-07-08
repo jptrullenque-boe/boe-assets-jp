@@ -9,6 +9,8 @@
   --amarillo:#fff7e0; --amarillo-borde:#e7c66b;
 }
 *{box-sizing:border-box;}
+:root{color-scheme:light;}
+html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
 body{margin:0; background:var(--crema); color:var(--tinta); line-height:1.6;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
 .wrap{max-width:560px; margin:0 auto; padding:0 20px;}
@@ -29,9 +31,9 @@ p{font-size:16px; margin:0 0 14px;}
 .pasos{list-style:none; counter-reset:paso; padding:0; margin:0 0 8px;}
 .pasos li{counter-increment:paso; display:flex; gap:14px; align-items:flex-start;
   padding:13px 0; border-bottom:1px solid var(--linea); font-size:16px;}
-.pasos li::before{content:counter(paso); flex:0 0 30px; height:30px; border-radius:50%;
-  background:var(--acento); color:#fff; font-weight:700; font-size:15px;
-  display:flex; align-items:center; justify-content:center; margin-top:1px;}
+.pasos li::before{content:counter(paso); flex:0 0 30px; width:30px; min-width:30px;
+  height:30px; min-height:30px; border-radius:50%; background:var(--acento); color:#fff;
+  font-weight:700; font-size:15px; line-height:30px; text-align:center; margin-top:1px;}
 .pasos li:last-child{border-bottom:none;}
 .timeline{display:flex; flex-direction:column; gap:10px; margin:16px 0 6px;}
 .timeline .step{background:var(--crema); border:1px solid var(--linea); border-radius:10px; padding:13px 16px;}
